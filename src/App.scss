@@ -1,0 +1,20 @@
+#root {
+  padding: .9375rem;
+
+  @media (max-width: 768px) {
+    padding: .625rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: .3125rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0;
+  }
+}
+
+
+
+
+
