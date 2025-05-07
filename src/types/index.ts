@@ -1,5 +1,5 @@
 export type Product = {
-    id: string;
+    id: number;
     name: string;
     price: number;
     power: string;
@@ -7,6 +7,7 @@ export type Product = {
     type: "LED" | "incandescent" | "CFL" | "smart" | string;
     lamp_cap: string;
     image_url: string;
+    description: string;
     created_at: string;
     updated_at: string;
 };

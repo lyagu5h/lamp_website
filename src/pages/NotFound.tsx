@@ -1,4 +1,4 @@
-import '../styles/NotFound.scss'
+import '../styles/pages/NotFound.scss'
 const NotFound = () => {
   return (
     <section className='not-found'>

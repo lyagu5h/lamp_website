@@ -1,14 +1,15 @@
-import '../styles/Header.scss'
+import { useState } from 'react';
+import '../styles/components/Header.scss'
 
 const Header = () => {
-  let cartCount: number = 0
+  const [cartCount, setCartCount] = useState(0);
 
   return (
     <header className='header'>
       <h1 className="header__logo">lamp</h1>
       <aside className='header__menu'>
         <button>Каталог</button>
-        <button onClick={() => cartCount++}>Корзина {cartCount} </button>
+        <button onClick={() => setCartCount(cartCount + 1)}>Корзина {cartCount} </button>
       </aside>
     </header>
   )

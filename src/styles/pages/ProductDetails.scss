@@ -1,0 +1,87 @@
+.product-page {
+    padding-block: 2.375rem;
+
+    &__content {
+        max-width: 75rem;
+        display: flex;
+        margin: 0 auto;
+        gap: 2.125rem;
+    }
+
+    &__image {
+        flex: 1;
+        background-color: var(--product-background-color);
+        width: 33.125rem;
+    }
+
+    &__info {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-family: 'Anybody';
+        margin: 0;
+        text-align: right;
+    }
+
+    &__price {
+        font-size: 2rem;
+        font-family: 'Anybody';
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+
+    &__specs {
+        margin-top: 2rem;
+        h2 {
+            font-size: 1.5rem;
+            font-family: 'Inter Tight';
+            margin: 0;
+        }
+    }
+
+    &__specs-list {
+        margin-top: 1rem;
+    }
+
+    &__specs-text {
+        margin-top: .75rem;
+        font-size: 1.5rem;
+        font-family: 'Inter Tight';
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__description {
+        margin-top: 2rem;
+        h2 {
+            font-size: 1.5rem;
+            font-family: 'Inter Tight';
+        }
+    }
+
+    &__text {
+        line-height: 2rem;
+    }
+
+    &__text {
+        margin-top: .75rem;
+        font-size: 1.5rem;
+        font-family: 'Inter Tight';
+    }
+
+    &__btn {
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: 'Inter Tight';
+        background-color: transparent;
+        color: var(--secondary-color);
+        margin-left: auto;
+
+        &:hover {
+                text-decoration: underline;
+        }
+    }
+}
