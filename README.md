@@ -1,54 +1,28 @@
-# React + TypeScript + Vite
+# Интернет-магазин ламп
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+В этом простом проекте представлен интерфейс интернет-магазина ламп. В данном репозитории находится код интернет-магазина ламп, созданный с помощью React, TypeScript, scss и Vite.
 
-Currently, two official plugins are available:
+## Описание проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Проект представляет собой интернет-магазин, в котором пользователь может просматривать и покупать лампы. Магазин имеет следующие функции:
 
-## Expanding the ESLint configuration
+- просмотр списка ламп
+- просмотр подробной информации о лампе
+- добавление лампы в корзину
+- просмотр корзины
+- оформление заказа
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Как использовать
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Клонировать репозиторий
+2. Установить зависимости с помощью npm install
+3. Запустить проект с помощью npm run dev
+4. Открыть в браузере http://localhost:3000
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Скриншоты
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+![Main page](./screenshots/main.png)
+![Product details page](./screenshots/product.png)
+![Cart page](./screenshots/cart.png)
+![Order tracking page](./screenshots/track.png)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
