@@ -62,26 +62,127 @@
     }
 
     &__text {
-        line-height: 2rem;
-    }
-
-    &__text {
         margin-top: .75rem;
         font-size: 1.5rem;
         font-family: 'Inter Tight';
     }
 
+    &__btn-wrapper {
+        margin-top: 3rem;
+        text-align: right;
+    }
+
     &__btn {
+        padding: 0;
         border: none;
         cursor: pointer;
         font-size: 1.5rem;
         font-family: 'Inter Tight';
+        font-weight: bold;
         background-color: transparent;
         color: var(--secondary-color);
-        margin-left: auto;
 
         &:hover {
-                text-decoration: underline;
+            text-decoration: underline;
         }
     }
 }
+
+@media (max-width: 768px) {
+    .product-page {
+        &__content {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        &__image {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        &__info {
+            text-align: center;
+        }
+
+        &__title {
+            text-align: center;
+            font-size: 1.75rem;
+        }
+
+        &__price {
+            text-align: center;
+            font-size: 1.75rem;
+        }
+
+        &__specs {
+            text-align: center;
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__description {
+            text-align: center;
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__btn-wrapper {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .product-page {
+        padding-block: 1.25rem;
+
+        &__content {
+            gap: 1rem;
+        }
+
+        &__image {
+            width: 80%;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__price {
+            font-size: 1.5rem;
+        }
+
+        &__specs {
+            margin-top: 1.5rem;
+            h2 {
+                font-size: 1rem;
+            }
+        }
+
+        &__specs-text {
+            font-size: 1.25rem;
+        }
+
+        &__description {
+            margin-top: 1.5rem;
+            h2 {
+                font-size: 1rem;
+            }
+        }
+
+        &__text {
+            font-size: 1.25rem;
+        }
+
+        &__btn-wrapper {
+            margin-top: 2rem;
+        }
+
+        &__btn {
+            font-size: 1.25rem;
+        }
+    }
+}
+

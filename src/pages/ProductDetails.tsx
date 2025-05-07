@@ -2,12 +2,23 @@
 import { useParams } from "react-router-dom";
 import { products } from "../data/products";
 import "../styles/pages/ProductDetails.scss";
+import { useCart } from "../hooks/useCart";
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
+  const { addToCart } = useCart();
   const product = products.find(p => p.id === Number(id));
 
   if (!product) return <div className="product-page">Товар не найден</div>;
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image_url: product.image_url
+    }, 1);
+  };
 
   return (
     <main className="product-page">
@@ -33,7 +44,9 @@ const ProductDetails = () => {
             <h2>Описание:</h2>
             <p className="product-page__text">{product.description}</p>
           </div>
-          <button className="product-page__btn">Добавить товар в корзину</button>
+          <div className="product-page__btn-wrapper">
+            <button className="product-page__btn" onClick={handleAddToCart}>Добавить товар в корзину</button>
+          </div>
         </div>
       </div>
     </main>

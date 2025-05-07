@@ -1,5 +1,8 @@
 #root {
-  padding: 2.6875rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  padding-inline: 2.6875rem;
 
   @media (max-width: 768px) {
     padding: .625rem;
